@@ -1,0 +1,1275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Birkenstock EMEA — Branded Resale Business Case</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600;700;800&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --birk-blue: #023F85;
+      --birk-blue-dark: #012d5e;
+      --birk-blue-light: #d6e4f7;
+      --birk-blue-mid: #1155a0;
+      --birk-sand: #f5f0e8;
+      --birk-tan: #c8a97a;
+      --birk-tan-dark: #a07d4f;
+      --birk-earth: #6b5740;
+      --birk-bark: #2c1f14;
+      --birk-white: #faf9f6;
+      --birk-offwhite: #f0ece3;
+      --birk-gray: #888076;
+      --birk-lightgray: #e8e4dc;
+      --radius: 2px;
+      --radius-lg: 4px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Barlow', sans-serif;
+      background: var(--birk-white);
+      color: var(--birk-bark);
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      background: var(--birk-blue);
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 48px;
+      height: 60px;
+    }
+
+    .nav-logo {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.65);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+
+    .nav-links a:hover { color: #fff; }
+
+    .nav-tag {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.45);
+    }
+
+    /* ── HERO ── */
+    .hero {
+      margin-top: 60px;
+      background: var(--birk-blue);
+      color: #fff;
+      padding: 80px 48px 60px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: 'BIRKENSTOCK';
+      position: absolute;
+      right: -20px;
+      bottom: -40px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 160px;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      color: rgba(255,255,255,0.04);
+      white-space: nowrap;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    .hero-eyebrow {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--birk-tan);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .hero-eyebrow::before {
+      content: '';
+      display: inline-block;
+      width: 32px;
+      height: 1px;
+      background: var(--birk-tan);
+    }
+
+    .hero-headline {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: clamp(42px, 6vw, 72px);
+      font-weight: 800;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      line-height: 0.95;
+      margin-bottom: 28px;
+      max-width: 800px;
+    }
+
+    .hero-headline em {
+      font-style: normal;
+      color: var(--birk-tan);
+    }
+
+    .hero-sub {
+      font-size: 16px;
+      font-weight: 300;
+      color: rgba(255,255,255,0.7);
+      max-width: 560px;
+      line-height: 1.7;
+      margin-bottom: 48px;
+    }
+
+    .hero-kpis {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.12);
+      max-width: 640px;
+    }
+
+    .kpi {
+      background: rgba(0,0,0,0.2);
+      padding: 24px 28px;
+    }
+
+    .kpi-val {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 38px;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+      color: #fff;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .kpi-val span { color: var(--birk-tan); }
+
+    .kpi-label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+    }
+
+    /* ── SECTION WRAPPER ── */
+    .page-wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 48px;
+    }
+
+    /* ── SECTION HEADERS ── */
+    .section-label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--birk-blue);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .section-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--birk-lightgray);
+      max-width: 60px;
+    }
+
+    .section-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: clamp(30px, 4vw, 46px);
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      line-height: 1;
+      color: var(--birk-bark);
+      margin-bottom: 14px;
+    }
+
+    .section-title em {
+      font-style: normal;
+      color: var(--birk-blue);
+    }
+
+    .section-intro {
+      font-size: 15px;
+      font-weight: 300;
+      color: var(--birk-gray);
+      max-width: 600px;
+      line-height: 1.75;
+      margin-bottom: 40px;
+    }
+
+    /* ── DIVIDER ── */
+    .divider {
+      height: 1px;
+      background: var(--birk-lightgray);
+      margin: 64px 0;
+    }
+
+    .divider-blue {
+      height: 3px;
+      background: var(--birk-blue);
+      width: 48px;
+      margin: 0 0 48px;
+    }
+
+    /* ── PROBLEM SECTION ── */
+    #problem { padding: 72px 0; }
+
+    .problem-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1px;
+      background: var(--birk-lightgray);
+      border: 1px solid var(--birk-lightgray);
+      margin-bottom: 40px;
+    }
+
+    .problem-card {
+      background: var(--birk-white);
+      padding: 32px 28px;
+    }
+
+    .problem-card:hover { background: var(--birk-sand); }
+
+    .problem-number {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 52px;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+      color: var(--birk-blue);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .problem-desc {
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--birk-gray);
+      line-height: 1.6;
+    }
+
+    .insight-box {
+      background: var(--birk-blue);
+      color: #fff;
+      padding: 28px 32px;
+      display: flex;
+      gap: 24px;
+      align-items: flex-start;
+    }
+
+    .insight-icon {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--birk-tan);
+      flex-shrink: 0;
+      line-height: 1;
+    }
+
+    .insight-text {
+      font-size: 14px;
+      font-weight: 300;
+      color: rgba(255,255,255,0.8);
+      line-height: 1.7;
+    }
+
+    .insight-text strong {
+      color: #fff;
+      font-weight: 500;
+    }
+
+    /* ── APPROACH ── */
+    #approach { padding: 0 0 72px; }
+
+    .phases { display: flex; flex-direction: column; gap: 0; }
+
+    .phase {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      border: 1px solid var(--birk-lightgray);
+      margin-bottom: -1px;
+    }
+
+    .phase-aside {
+      background: var(--birk-blue);
+      padding: 32px 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .phase-num {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 72px;
+      font-weight: 800;
+      color: rgba(255,255,255,0.12);
+      line-height: 1;
+    }
+
+    .phase-badge {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--birk-tan);
+    }
+
+    .phase-body {
+      padding: 32px 36px;
+      background: var(--birk-white);
+    }
+
+    .phase-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--birk-bark);
+      margin-bottom: 12px;
+    }
+
+    .phase-desc {
+      font-size: 14px;
+      font-weight: 300;
+      color: var(--birk-gray);
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    .options-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .option-card {
+      border: 1px solid var(--birk-lightgray);
+      padding: 16px 20px;
+    }
+
+    .option-label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--birk-blue);
+      margin-bottom: 6px;
+    }
+
+    .option-text {
+      font-size: 13px;
+      color: var(--birk-gray);
+      line-height: 1.55;
+    }
+
+    /* ── REVENUE MODEL ── */
+    #revenue { padding: 0 0 72px; }
+
+    .revenue-wrap {
+      display: grid;
+      grid-template-columns: 1fr 360px;
+      gap: 32px;
+      align-items: start;
+    }
+
+    .controls-block {
+      background: var(--birk-sand);
+      border: 1px solid var(--birk-lightgray);
+      padding: 32px;
+    }
+
+    .control-group { margin-bottom: 28px; }
+
+    .control-label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--birk-blue);
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .control-value {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--birk-bark);
+    }
+
+    input[type="range"] {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 100%;
+      height: 3px;
+      background: var(--birk-lightgray);
+      outline: none;
+      cursor: pointer;
+    }
+
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 18px;
+      height: 18px;
+      background: var(--birk-blue);
+      border: 2px solid #fff;
+      border-radius: 50%;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+      cursor: pointer;
+    }
+
+    .toggle-group {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      border: 1px solid var(--birk-lightgray);
+    }
+
+    .toggle-btn {
+      padding: 10px 12px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      border: none;
+      background: var(--birk-white);
+      color: var(--birk-gray);
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+
+    .toggle-btn.active {
+      background: var(--birk-blue);
+      color: #fff;
+    }
+
+    .result-card {
+      background: var(--birk-blue);
+      color: #fff;
+      padding: 40px 36px;
+      border: 1px solid var(--birk-blue-dark);
+      position: sticky;
+      top: 80px;
+    }
+
+    .result-eyebrow {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--birk-tan);
+      margin-bottom: 12px;
+    }
+
+    .result-gmv {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 68px;
+      font-weight: 800;
+      line-height: 1;
+      color: #fff;
+      margin-bottom: 4px;
+    }
+
+    .result-gmv-label {
+      font-size: 12px;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 32px;
+    }
+
+    .result-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 0;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .result-row-label {
+      font-size: 12px;
+      color: rgba(255,255,255,0.6);
+    }
+
+    .result-row-val {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .margin-track {
+      height: 4px;
+      background: rgba(255,255,255,0.15);
+      margin-top: 6px;
+      position: relative;
+    }
+
+    .margin-fill {
+      height: 100%;
+      background: var(--birk-tan);
+      transition: width 0.35s ease;
+    }
+
+    .result-note {
+      margin-top: 20px;
+      font-size: 12px;
+      color: rgba(255,255,255,0.45);
+      line-height: 1.6;
+      font-style: italic;
+    }
+
+    /* ── BENEFITS ── */
+    #benefits { padding: 0 0 72px; }
+
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1px;
+      background: var(--birk-lightgray);
+      border: 1px solid var(--birk-lightgray);
+    }
+
+    .benefit-card {
+      background: var(--birk-white);
+      padding: 36px 32px;
+      transition: background 0.15s;
+    }
+
+    .benefit-card:hover { background: var(--birk-sand); }
+
+    .benefit-stat {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 56px;
+      font-weight: 800;
+      color: var(--birk-blue);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .benefit-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--birk-bark);
+      margin-bottom: 10px;
+    }
+
+    .benefit-desc {
+      font-size: 13px;
+      color: var(--birk-gray);
+      line-height: 1.65;
+    }
+
+    /* ── TIMELINE ── */
+    #timeline { padding: 0 0 72px; }
+
+    .timeline {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1px;
+      background: var(--birk-lightgray);
+      border: 1px solid var(--birk-lightgray);
+    }
+
+    .tl-item {
+      background: var(--birk-white);
+      padding: 28px 20px;
+      position: relative;
+    }
+
+    .tl-item:hover { background: var(--birk-sand); }
+
+    .tl-month {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 44px;
+      font-weight: 800;
+      color: var(--birk-lightgray);
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+
+    .tl-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--birk-blue);
+      margin-bottom: 8px;
+    }
+
+    .tl-desc {
+      font-size: 12px;
+      color: var(--birk-gray);
+      line-height: 1.6;
+    }
+
+    /* ── INVESTMENT ── */
+    #investment { padding: 0 0 72px; }
+
+    .invest-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--birk-lightgray);
+      border: 1px solid var(--birk-lightgray);
+      margin-bottom: 24px;
+    }
+
+    .invest-item {
+      background: var(--birk-sand);
+      padding: 28px 24px;
+    }
+
+    .invest-label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--birk-blue);
+      margin-bottom: 8px;
+    }
+
+    .invest-val {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--birk-bark);
+      margin-bottom: 4px;
+    }
+
+    .invest-sub {
+      font-size: 12px;
+      color: var(--birk-gray);
+      line-height: 1.5;
+    }
+
+    /* ── CTA ── */
+    .cta-section {
+      background: var(--birk-blue);
+      padding: 72px 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .cta-left { flex: 1; min-width: 300px; }
+
+    .cta-eyebrow {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--birk-tan);
+      margin-bottom: 12px;
+    }
+
+    .cta-headline {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 42px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      color: #fff;
+      line-height: 1;
+      margin-bottom: 14px;
+    }
+
+    .cta-sub {
+      font-size: 14px;
+      font-weight: 300;
+      color: rgba(255,255,255,0.6);
+    }
+
+    .cta-btn {
+      display: inline-block;
+      background: var(--birk-tan);
+      color: var(--birk-bark);
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      padding: 16px 36px;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.15s;
+      white-space: nowrap;
+    }
+
+    .cta-btn:hover { background: #d6b98a; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--birk-bark);
+      color: rgba(255,255,255,0.4);
+      padding: 28px 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 11px;
+      font-family: 'Barlow Condensed', sans-serif;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .footer-brand {
+      font-weight: 700;
+      color: rgba(255,255,255,0.6);
+    }
+
+    /* ── ACCORDION ── */
+    .acc-section {
+      border: 1px solid var(--birk-lightgray);
+      border-bottom: none;
+    }
+
+    .acc-section:last-child { border-bottom: 1px solid var(--birk-lightgray); }
+
+    .acc-toggle {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      text-align: left;
+      background: var(--birk-white);
+      transition: background 0.12s;
+    }
+
+    .acc-toggle:hover { background: var(--birk-sand); }
+
+    .acc-toggle-label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--birk-bark);
+    }
+
+    .acc-arrow {
+      font-size: 12px;
+      color: var(--birk-gray);
+      transition: transform 0.2s;
+    }
+
+    .acc-arrow.open { transform: rotate(180deg); }
+
+    .acc-body {
+      display: none;
+      padding: 0 24px 24px;
+      background: var(--birk-sand);
+    }
+
+    .acc-body.open { display: block; }
+
+    .acc-body p {
+      font-size: 14px;
+      font-weight: 300;
+      color: var(--birk-gray);
+      line-height: 1.75;
+      padding-top: 20px;
+    }
+
+    /* ── UTIL ── */
+    .mt-12 { margin-top: 12px; }
+    .mt-24 { margin-top: 24px; }
+
+    @media (max-width: 768px) {
+      nav { padding: 0 20px; }
+      .nav-links { display: none; }
+      .hero { padding: 48px 20px 40px; }
+      .hero-kpis { grid-template-columns: 1fr; }
+      .page-wrap { padding: 0 20px; }
+      .problem-grid, .benefits-grid, .options-grid { grid-template-columns: 1fr; }
+      .phase { grid-template-columns: 1fr; }
+      .phase-num { display: none; }
+      .revenue-wrap { grid-template-columns: 1fr; }
+      .timeline { grid-template-columns: 1fr 1fr; }
+      .invest-grid { grid-template-columns: 1fr; }
+      .cta-section { padding: 48px 20px; }
+      footer { flex-direction: column; gap: 8px; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#" class="nav-logo">Birkenstock</a>
+    <ul class="nav-links">
+      <li><a href="#problem">The Problem</a></li>
+      <li><a href="#approach">Approach</a></li>
+      <li><a href="#revenue">Revenue Model</a></li>
+      <li><a href="#benefits">Benefits</a></li>
+      <li><a href="#timeline">Timeline</a></li>
+    </ul>
+    <span class="nav-tag">EMEA Digital · Confidential</span>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-eyebrow">EMEA Strategic Business Case · 2025</div>
+    <h1 class="hero-headline">Branded Resale:<br><em>€2.5M+</em> Hiding<br>In Your Warehouse</h1>
+    <p class="hero-sub">Thousands of pairs already sit in EMEA warehouses with no productive exit. One strategic move unlocks new revenue, new customers, and stronger DTC margins — starting with inventory you already own.</p>
+    <div class="hero-kpis">
+      <div class="kpi">
+        <div class="kpi-val"><span>€2.8M</span></div>
+        <div class="kpi-label">Year 1 GMV Potential</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-val"><span>65%</span></div>
+        <div class="kpi-label">Net Margin (Own WH)</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-val"><span>4–5</span></div>
+        <div class="kpi-label">Months to Launch</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROBLEM -->
+  <section id="problem">
+    <div class="page-wrap">
+      <div class="divider-blue"></div>
+      <div class="section-label">01 — The Problem</div>
+      <h2 class="section-title">Idle Inventory.<br><em>Missed Revenue.</em></h2>
+      <p class="section-intro">Birkenstock has not adjusted to shifting consumer behavior around secondhand, has not de-risked its supply chain, and has costly inventory sitting with no productive exit channel.</p>
+
+      <div class="problem-grid">
+        <div class="problem-card">
+          <div class="problem-number">~35K</div>
+          <div class="problem-desc">Pairs of returns sitting in EMEA warehouses — capital already sunk, no productive exit, no revenue recovered</div>
+        </div>
+        <div class="problem-card">
+          <div class="problem-number">1M+</div>
+          <div class="problem-desc">Pairs of excess inventory globally — liquidated for pennies on the dollar or sitting idle in storage</div>
+        </div>
+        <div class="problem-card">
+          <div class="problem-number">⅓</div>
+          <div class="problem-desc">Of Gen-Z and Millennial closets is secondhand — many look at pre-owned options before buying new</div>
+        </div>
+        <div class="problem-card">
+          <div class="problem-number">€0</div>
+          <div class="problem-desc">Revenue Birkenstock earns when consumers buy its products secondhand elsewhere — hundreds of thousands of times per year</div>
+        </div>
+      </div>
+
+      <div class="insight-box">
+        <div class="insight-icon">→</div>
+        <div class="insight-text">
+          <strong>Consumers are already buying your products secondhand at scale.</strong> The demand is proven. The only question is whether Birkenstock captures it — or continues to let third parties capture it instead. Meanwhile, DTC growth has slowed and margins are tightening. Resale is a ready-made lever that requires no new production.
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- FAQ on problem -->
+      <div class="acc-section">
+        <button class="acc-toggle" onclick="accToggle(this)">
+          <span class="acc-toggle-label">Why can't we just liquidate excess inventory?</span>
+          <span class="acc-arrow">▼</span>
+        </button>
+        <div class="acc-body">
+          <p>Liquidation recovers pennies on the dollar and actively undermines brand positioning. It puts Birkenstock product in discount channels without brand control, damages perceived premium value, and recovers a fraction of the capital already invested in production. Branded resale recovers significantly more revenue while keeping the customer relationship and brand experience in-house.</p>
+        </div>
+      </div>
+      <div class="acc-section">
+        <button class="acc-toggle" onclick="accToggle(this)">
+          <span class="acc-toggle-label">Does resale cannibalize mainline sales?</span>
+          <span class="acc-arrow">▼</span>
+        </button>
+        <div class="acc-body">
+          <p>Evidence across enterprise footwear brands shows the opposite. Branded resale attracts a different consumer — one who discovered the brand through a lower price point and becomes a mainline customer. Resale customers who also shop mainline show 2.8× higher lifetime value than mainline-only customers. It expands the funnel, it doesn't shrink it.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- APPROACH -->
+  <section id="approach">
+    <div class="page-wrap">
+      <div class="section-label">02 — Recommended Approach</div>
+      <h2 class="section-title">A Phased Path<br>to <em>Scale</em></h2>
+      <p class="section-intro">All enterprise footwear brands that have launched resale started the same way: activating inventory already on hand. Birkenstock is ideally positioned to do this faster than most.</p>
+
+      <div class="phases">
+        <div class="phase">
+          <div class="phase-aside">
+            <div class="phase-num">01</div>
+            <div class="phase-badge">Launch Phase</div>
+          </div>
+          <div class="phase-body">
+            <div class="phase-title">Brand-Owned Inventory Resale</div>
+            <div class="phase-desc">Leverage returns, damages, and excess inventory to seed the resale channel. Demand modeling shows the market can absorb 70,000+ units in year 1. Two logistics models available — choose based on current warehouse capabilities and desired margin profile.</div>
+            <div class="options-grid">
+              <div class="option-card">
+                <div class="option-label">Option A — In-House</div>
+                <div class="option-text">Integrate Archive's WMS into your existing warehouse. Lower per-unit cost, more operational control. Best if current processing capabilities are strong.</div>
+              </div>
+              <div class="option-card">
+                <div class="option-label">Option B — 3PL Partner</div>
+                <div class="option-text">Leverage a vetted 3PL specialist in reverse logistics via Archive's WMS. Higher per-unit cost, but scales easily and handles cleaning/repair workflows.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="phase">
+          <div class="phase-aside">
+            <div class="phase-num">02</div>
+            <div class="phase-badge">Scale Phase</div>
+          </div>
+          <div class="phase-body">
+            <div class="phase-title">Add Trade-In (In-Store & Mail-In)</div>
+            <div class="phase-desc">Adds a powerful second supply source and creates a new brand touchpoint. Customers trade in worn pairs and receive a gift card — then on average spend <strong>2.5–3× the gift card value on mainline</strong>. Drives store traffic, same-day purchases, and measurable loyalty lift. Trade-in becomes an additive revenue driver to the overall business, not just a resale mechanic.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div style="height: 64px;"></div>
+
+  <!-- REVENUE -->
+  <section id="revenue">
+    <div class="page-wrap">
+      <div class="section-label">03 — Revenue Model</div>
+      <h2 class="section-title">Interactive<br><em>Projection</em></h2>
+      <p class="section-intro">Adjust supply volume and logistics model to see estimated Year 1 GMV and net margin. Supply is the primary constraint — demand is already proven.</p>
+
+      <div class="revenue-wrap">
+        <div>
+          <div class="controls-block">
+            <div class="control-group">
+              <div class="control-label">
+                <span>Units of Supply</span>
+                <span class="control-value" id="units-display">90,000</span>
+              </div>
+              <input type="range" min="10000" max="90000" step="5000" value="90000" id="units-slider" oninput="updateModel()" />
+              <div style="display:flex; justify-content:space-between; font-size:11px; color:#888076; margin-top:6px;">
+                <span>10,000</span><span>90,000</span>
+              </div>
+            </div>
+
+            <div class="control-group">
+              <div class="control-label"><span>Logistics Model</span></div>
+              <div class="toggle-group">
+                <button class="toggle-btn" id="btn-3pl" onclick="setModel('3pl')">3PL Partner</button>
+                <button class="toggle-btn active" id="btn-own" onclick="setModel('own')">Own Warehouse</button>
+              </div>
+            </div>
+
+            <div style="font-size:12px; color:#888076; line-height:1.6; border-top:1px solid #e8e4dc; padding-top:20px;">
+              <strong style="color:#2c1f14;">Supply is the key constraint.</strong> With standard organic and paid marketing support, there is consumer demand for 90,000+ units in year 1. The more supply committed, the stronger the margin profile.
+            </div>
+          </div>
+
+          <div class="mt-24">
+            <div style="background:#f5f0e8; border:1px solid #e8e4dc; padding:28px 32px;">
+              <div style="font-family:'Barlow Condensed',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:#023F85; margin-bottom:16px;">Scenario Comparison</div>
+              <table style="width:100%; font-size:13px; border-collapse:collapse;">
+                <thead>
+                  <tr style="border-bottom:1px solid #e8e4dc;">
+                    <th style="text-align:left; padding:8px 0; font-weight:600; font-size:11px; letter-spacing:0.06em; text-transform:uppercase; color:#888076;">Supply</th>
+                    <th style="text-align:right; padding:8px 0; font-weight:600; font-size:11px; letter-spacing:0.06em; text-transform:uppercase; color:#888076;">GMV</th>
+                    <th style="text-align:right; padding:8px 0; font-weight:600; font-size:11px; letter-spacing:0.06em; text-transform:uppercase; color:#888076;">Own WH Margin</th>
+                    <th style="text-align:right; padding:8px 0; font-weight:600; font-size:11px; letter-spacing:0.06em; text-transform:uppercase; color:#888076;">3PL Margin</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr style="border-bottom:1px solid #e8e4dc;">
+                    <td style="padding:10px 0; color:#2c1f14;">90,000 units</td>
+                    <td style="padding:10px 0; text-align:right; font-family:'Barlow Condensed',sans-serif; font-weight:700; color:#023F85;">€2.8M</td>
+                    <td style="padding:10px 0; text-align:right; color:#6b5740;">65%</td>
+                    <td style="padding:10px 0; text-align:right; color:#6b5740;">49%</td>
+                  </tr>
+                  <tr>
+                    <td style="padding:10px 0; color:#2c1f14;">45,000 units</td>
+                    <td style="padding:10px 0; text-align:right; font-family:'Barlow Condensed',sans-serif; font-weight:700; color:#023F85;">€1.4M</td>
+                    <td style="padding:10px 0; text-align:right; color:#6b5740;">62%</td>
+                    <td style="padding:10px 0; text-align:right; color:#6b5740;">45%</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="result-card">
+          <div class="result-eyebrow">Estimated Year 1 Result</div>
+          <div class="result-gmv" id="result-gmv">€2.8M</div>
+          <div class="result-gmv-label">Gross Merchandise Value</div>
+
+          <div class="result-row">
+            <span class="result-row-label">Net Margin</span>
+            <span class="result-row-val" id="result-margin">65%</span>
+          </div>
+          <div class="margin-track">
+            <div class="margin-fill" id="margin-fill" style="width:65%"></div>
+          </div>
+
+          <div class="result-row">
+            <span class="result-row-label">Units</span>
+            <span class="result-row-val" id="result-units">90,000</span>
+          </div>
+
+          <div class="result-row">
+            <span class="result-row-label">Logistics</span>
+            <span class="result-row-val" id="result-model">Own WH</span>
+          </div>
+
+          <div class="result-row">
+            <span class="result-row-label">Launch Timeline</span>
+            <span class="result-row-val">4–5 months</span>
+          </div>
+
+          <div class="result-note" id="result-note">
+            At 90,000 units with own warehouse integration, net margin reaches 65% after platform, commission, and logistics fees.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div style="height: 64px;"></div>
+
+  <!-- BENEFITS -->
+  <section id="benefits">
+    <div class="page-wrap">
+      <div class="section-label">04 — Strategic Benefits</div>
+      <h2 class="section-title">Beyond the<br><em>Revenue Line</em></h2>
+      <p class="section-intro">Resale isn't just a margin play. Across every enterprise footwear brand that has launched, the downstream effects on customer acquisition, loyalty, and mainline revenue are equally compelling.</p>
+
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="benefit-stat">>50%</div>
+          <div class="benefit-title">Net-New Customer Acquisition</div>
+          <div class="benefit-desc">On average, more than half of branded resale customers are new to the brand. One comparable global footwear brand acquires net-new customers through resale at a higher rate than through its mainline channel — at a fraction of the CAC.</div>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-stat">2.8×</div>
+          <div class="benefit-title">Higher Lifetime Value</div>
+          <div class="benefit-desc">Customers who shop both a brand's resale channel and mainline have 2.8× higher LTV than mainline-only customers. Resale creates a stickier, more engaged consumer relationship — not a cheaper one.</div>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-stat">2.5–3×</div>
+          <div class="benefit-title">Trade-In Upspend on Mainline</div>
+          <div class="benefit-desc">Every €1 of brand credit given to customers who trade in drives €2.5–3 in mainline revenue. Trade-in creates a virtuous loop: customers offload old pairs, receive credit, and immediately invest back in the brand.</div>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-stat">2+ yrs</div>
+          <div class="benefit-title">Lapsed Customer Reactivation</div>
+          <div class="benefit-desc">Resale has a unique ability to re-engage customers who have been inactive for 2 or more years. New ways to participate with the brand — at a different price point — bring lapsed shoppers back into the active customer base.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIMELINE -->
+  <section id="timeline">
+    <div class="page-wrap">
+      <div class="section-label">05 — Implementation Timeline</div>
+      <h2 class="section-title">Live in<br><em>4–5 Months</em></h2>
+      <p class="section-intro">Archive handles the heavy lifting — site design and build, integrations, WMS configuration. Birkenstock inputs are focused on brand direction, pricing strategy, and product data.</p>
+
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-month">M1</div>
+          <div class="tl-title">Scoping & Alignment</div>
+          <div class="tl-desc">Site branding, pricing strategy, product catalog audit, country selection for initial launch</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-month">M2</div>
+          <div class="tl-title">Integrations & WMS</div>
+          <div class="tl-desc">Site build by Archive, integrations configured, condition tiers and shipping rules defined</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-month">M3</div>
+          <div class="tl-title">Logistics Setup</div>
+          <div class="tl-desc">3PL vetting (if needed), warehouse integration, returns processing workflow</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-month">M4</div>
+          <div class="tl-title">QA & Soft Launch</div>
+          <div class="tl-desc">Translations, end-to-end testing, initial inventory seeding, organic launch</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-month">M5</div>
+          <div class="tl-title">Full Launch</div>
+          <div class="tl-desc">Paid and organic marketing activation. Demand supports 90,000+ unit throughput at scale</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INVESTMENT -->
+  <section id="investment">
+    <div class="page-wrap">
+      <div class="section-label">06 — Required Investment</div>
+      <h2 class="section-title">What Birkenstock<br><em>Needs to Provide</em></h2>
+      <p class="section-intro">Archive manages implementation. Birkenstock's primary inputs are around brand decisions, product data, and logistics configuration — not engineering resources.</p>
+
+      <div class="invest-grid">
+        <div class="invest-item">
+          <div class="invest-label">Brand Inputs</div>
+          <div class="invest-val">Design direction</div>
+          <div class="invest-sub">Site branding, visual guidelines, tone-of-voice for resale channel positioning</div>
+        </div>
+        <div class="invest-item">
+          <div class="invest-label">Product Data</div>
+          <div class="invest-val">Catalog integration</div>
+          <div class="invest-sub">Product data integration support, condition tier definitions, translations for launch markets</div>
+        </div>
+        <div class="invest-item">
+          <div class="invest-label">Operations</div>
+          <div class="invest-val">WMS & shipping</div>
+          <div class="invest-sub">WMS configuration rules, shipping setup, warehouse or 3PL onboarding decision</div>
+        </div>
+      </div>
+
+      <div class="insight-box">
+        <div class="insight-icon">!</div>
+        <div class="insight-text">
+          <strong>Supply is the ceiling — not demand.</strong> Consumer demand for secondhand Birkenstock product is already demonstrated in third-party markets. With standard organic and paid marketing support, the model shows capacity for 90,000+ units in year 1. The variable is how much inventory Birkenstock chooses to commit.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="cta-left">
+      <div class="cta-eyebrow">Next Steps</div>
+      <div class="cta-headline">Include Resale in<br>the Next Budget Cycle</div>
+      <div class="cta-sub">€1.4M–€2.8M net-new DTC revenue · Year 1 · 4–5 months to launch · High margin, low risk</div>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:12px; align-items:flex-start;">
+      <a href="mailto:?" class="cta-btn">Request a Deep-Dive →</a>
+      <div style="font-size:11px; color:rgba(255,255,255,0.35); font-family:'Barlow Condensed',sans-serif; letter-spacing:0.08em; text-transform:uppercase;">Prepared by Archive for Birkenstock EMEA Digital</div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <span class="footer-brand">Birkenstock Group</span>
+    <span>EMEA Digital · Strategic Business Case · Confidential · 2025</span>
+    <span>Powered by Archive</span>
+  </footer>
+
+  <script>
+    let currentModel = 'own';
+
+    function setModel(model) {
+      currentModel = model;
+      document.getElementById('btn-3pl').classList.toggle('active', model === '3pl');
+      document.getElementById('btn-own').classList.toggle('active', model === 'own');
+      updateModel();
+    }
+
+    function updateModel() {
+      const units = parseInt(document.getElementById('units-slider').value);
+      document.getElementById('units-display').textContent = units.toLocaleString();
+      document.getElementById('result-units').textContent = units.toLocaleString();
+
+      const gmv = ((units / 90000) * 2.8).toFixed(1);
+      document.getElementById('result-gmv').textContent = '€' + gmv + 'M';
+
+      const is90k = units >= 90000;
+      const margin = currentModel === 'own'
+        ? (is90k ? 65 : Math.round(62 + ((units - 45000) / 45000) * 3))
+        : (is90k ? 49 : Math.round(45 + ((units - 45000) / 45000) * 4));
+
+      const marginClamped = Math.min(Math.max(margin, currentModel === 'own' ? 60 : 42), currentModel === 'own' ? 65 : 49);
+
+      document.getElementById('result-margin').textContent = marginClamped + '%';
+      document.getElementById('margin-fill').style.width = marginClamped + '%';
+      document.getElementById('result-model').textContent = currentModel === 'own' ? 'Own WH' : '3PL';
+
+      const modelLabel = currentModel === 'own' ? 'own warehouse integration' : '3PL logistics partner';
+      document.getElementById('result-note').textContent =
+        'At ' + units.toLocaleString() + ' units with ' + modelLabel + ', net margin reaches ' + marginClamped + '% after platform, commission, and logistics fees.';
+    }
+
+    function accToggle(btn) {
+      const body = btn.nextElementSibling;
+      const arrow = btn.querySelector('.acc-arrow');
+      const isOpen = body.classList.contains('open');
+      body.classList.toggle('open', !isOpen);
+      arrow.classList.toggle('open', !isOpen);
+    }
+
+    updateModel();
+  </script>
+</body>
+</html>
